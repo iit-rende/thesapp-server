@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- REPORT GENERATOR -->
+<!DOCTYPE THESAURUS [
+<!ELEMENT THESAURUS (CONCEPT+)>
+<!ELEMENT CONCEPT ( (DESCRIPTOR|NON-DESCRIPTOR),SC*,SN*,UF*,USE*,BT*,NT*,RT*,ENG*)>
+<!ELEMENT DESCRIPTOR (#PCDATA)>
+<!ELEMENT NON-DESCRIPTOR (#PCDATA)>
+<!ELEMENT SC (#PCDATA)>
+<!ELEMENT SN (#PCDATA)>
+<!ELEMENT UF (#PCDATA)>
+<!ELEMENT USE (#PCDATA)>
+<!ELEMENT BT (#PCDATA)>
+<!ELEMENT NT (#PCDATA)>
+<!ELEMENT RT (#PCDATA)>
+<!ELEMENT ENG (#PCDATA)>
+]>
+
+<THESAURUS>
+<CONCEPT>
+ <DESCRIPTOR>Aarskog, sindrome di</DESCRIPTOR>
+ <SC>H Malattie genetiche</SC>
+ <SC>L Anomalie dello sviluppo durante l'embriogenesi</SC>
+ <UF>Displasia faciogenitale</UF>
+ <ENG>AArskog Syndrome</ENG>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Aase-Smith di tipo 1, Sindrome di</NON-DESCRIPTOR>
+ <USE>Aase-Smith, Sindrome di</USE>
+ <ENG>AAse Syndrome, type 1</ENG>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Aase-Smith, Sindrome di</DESCRIPTOR>
+ <UF>Aase-Smith di tipo 1, Sindrome di</UF>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Acalasia-microcefalia</DESCRIPTOR>
+ <SC>G Malattia neurologiche</SC>
+ <SC>L Anomalie dello sviluppo durante l'embriogenesi</SC>
+ <ENG>Achalasia - microcephaly</ENG>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Aceruloplasminemia</DESCRIPTOR>
+ <NT>Aceruloplasminemia congenita</NT>
+ <NT>Neurodegenerazione con accumulo cerebrale di ferro</NT>
+ <ENG>aceruloplasminemia</ENG>
+</CONCEPT>
+</THESAURUS>

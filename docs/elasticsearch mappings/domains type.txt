@@ -1,0 +1,38 @@
+POST /thesapp/_mappings/domains
+
+{
+   "domains":{  
+	"dynamic": "strict",
+      "properties":{  
+         "descriptor":{  
+            "type":"string",
+            "index":"not_analyzed"
+         },
+         "color":{
+            "type":"string",
+            "index":"not_analyzed"
+         },
+         "localizations":{  
+            "type":"nested",
+			"dynamic": "strict",
+            "properties":{  
+               "language":{  
+                  "type":"string",
+                  "index":"not_analyzed"
+               },
+               "descriptor":{  
+                  "type":"string",
+                  "index":"not_analyzed"
+               },
+			   "description":{
+					"type":"string",
+					"index":"not_analyzed"
+			   },
+			   "termCount":{
+				  "type":"integer"
+			   }
+            }
+         }
+      }
+   }
+}

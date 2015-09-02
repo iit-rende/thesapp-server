@@ -1,0 +1,128 @@
+POST /thesapp/_mappings/terms
+
+{
+   "terms":{
+	  "dynamic": "strict",
+      "properties":{  
+         "descriptor":		
+			{
+                "type" : "multi_field",
+                "fields" : {
+					"descriptor" : {"type" : "string", "index" : "not_analyzed", "store": true},
+                    "analyzed" : {"type" : "string", "index" : "analyzed", "analyzer":"simple"}
+                }
+         },
+         "scopeNote":{  
+            "type":"string",
+            "index":"analyzed",
+            "analyzer":"simple"
+         },
+         "domain":{  
+            "type":"string",
+            "index":"not_analyzed",
+			"include_in_all" : false
+         },
+         "language":{  
+            "type":"string",
+            "index":"not_analyzed",
+			"stored": true,
+			"include_in_all" : false
+         },
+		 "use":{  
+            "type":"string",
+            "index":"not_analyzed",
+			"stored": true
+         },
+         "categories":{  
+            "type":"nested",
+			"dynamic": "strict",
+            "properties":{  
+               "descriptor":{  			  
+				  "type" : "multi_field",
+					"fields" : {
+						"descriptor" : {"type" : "string", "index" : "not_analyzed", "store": true},
+						"analyzed" : {"type" : "string", "index" : "analyzed", "analyzer":"simple"}
+					}				  
+               }
+            }
+         },
+         "relatedTerms":{  
+            "type":"nested",
+			"dynamic": "strict",
+            "properties":{  
+               "descriptor":{  
+                  "type":"string",
+                  "index":"analyzed",
+                  "analyzer":"simple"
+               }
+            }
+         },
+         "narrowerTerms":{  
+            "type":"nested",
+			"dynamic": "strict",
+            "properties":{  
+               "descriptor":{  
+                  "type":"string",
+                  "index":"analyzed",
+                  "analyzer":"simple"
+               }
+            }
+         },
+         "broaderTerms":{  
+            "type":"nested",
+			"dynamic": "strict",
+            "properties":{  
+               "descriptor":{  			  
+				  "type" : "multi_field",
+					"fields" : {
+						"descriptor" : {"type" : "string", "index" : "not_analyzed", "store": true},
+						"analyzed" : {"type" : "string", "index" : "analyzed", "analyzer":"simple"}
+					}				  
+               }
+            }
+         },
+		"hierarchy":{  
+            "type":"nested",
+			"dynamic": "strict",
+            "properties":{  
+               "descriptor":{  
+                  "type":"string",
+                  "index":"analyzed",
+                  "analyzer":"simple"
+               }
+            }
+         },
+         "useFor":{  
+            "type":"nested",
+			"dynamic": "strict",
+            "properties":{  
+               "descriptor":{  
+				  "type" : "multi_field",
+					"fields" : {
+						"descriptor" : {"type" : "string", "index" : "not_analyzed", "store": true},
+						"analyzed" : {"type" : "string", "index" : "analyzed", "analyzer":"simple"}
+					}	
+               }
+            }
+         },
+         "localizations":{  
+            "type":"nested",
+			"dynamic": "strict",
+			"include_in_all" : false,
+            "properties":{  
+               "language":{  
+                  "type":"string",
+                  "index":"not_analyzed",
+				  "include_in_all" : false
+               },
+               "descriptor":{  
+                  "type":"string",
+                  "index":"analyzed",
+                  "analyzer":"simple",
+				  "include_in_all" : false
+               }
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- HIERARCHICAL -->
+<!DOCTYPE THESAURUS [
+<!ELEMENT THESAURUS (CONCEPT+)>
+<!ELEMENT CONCEPT (DESCRIPTOR|NON-DESCRIPTOR|SC|SN|UF|USE|BT|BTG|BTI|BTP|NT|NTG|NTI|NTP|RT|ENG|STA|INP|APP|UPD|NVD|TNR)* >
+<!ELEMENT DESCRIPTOR (#PCDATA)>
+<!ELEMENT NON-DESCRIPTOR (#PCDATA)>
+<!ELEMENT SC (#PCDATA)>
+<!ELEMENT SN (#PCDATA)>
+<!ELEMENT UF (#PCDATA)>
+<!ELEMENT USE (#PCDATA)>
+<!ELEMENT BT (#PCDATA|SC|SN|UF|USE|BT|BTG|BTI|BTP|NT|NTG|NTI|NTP|RT|ENG|STA|INP|APP|UPD|NVD|TNR)* >
+<!ATTLIST BT level CDATA "">
+<!ELEMENT BTG (#PCDATA|SC|SN|UF|USE|BT|BTG|BTI|BTP|NT|NTG|NTI|NTP|RT|ENG|STA|INP|APP|UPD|NVD|TNR)* >
+<!ATTLIST BTG level CDATA "">
+<!ELEMENT BTI (#PCDATA|SC|SN|UF|USE|BT|BTG|BTI|BTP|NT|NTG|NTI|NTP|RT|ENG|STA|INP|APP|UPD|NVD|TNR)* >
+<!ATTLIST BTI level CDATA "">
+<!ELEMENT BTP (#PCDATA|SC|SN|UF|USE|BT|BTG|BTI|BTP|NT|NTG|NTI|NTP|RT|ENG|STA|INP|APP|UPD|NVD|TNR)* >
+<!ATTLIST BTP level CDATA "">
+<!ELEMENT NT (#PCDATA|SC|SN|UF|USE|BT|BTG|BTI|BTP|NT|NTG|NTI|NTP|RT|ENG|STA|INP|APP|UPD|NVD|TNR)* >
+<!ATTLIST NT level CDATA "">
+<!ELEMENT NTG (#PCDATA|SC|SN|UF|USE|BT|BTG|BTI|BTP|NT|NTG|NTI|NTP|RT|ENG|STA|INP|APP|UPD|NVD|TNR)* >
+<!ATTLIST NTG level CDATA "">
+<!ELEMENT NTI (#PCDATA|SC|SN|UF|USE|BT|BTG|BTI|BTP|NT|NTG|NTI|NTP|RT|ENG|STA|INP|APP|UPD|NVD|TNR)* >
+<!ATTLIST NTI level CDATA "">
+<!ELEMENT NTP (#PCDATA|SC|SN|UF|USE|BT|BTG|BTI|BTP|NT|NTG|NTI|NTP|RT|ENG|STA|INP|APP|UPD|NVD|TNR)* >
+<!ATTLIST NTP level CDATA "">
+<!ELEMENT RT (#PCDATA)>
+<!ELEMENT ENG (#PCDATA)>
+<!ELEMENT STA (#PCDATA)>
+<!ELEMENT INP (#PCDATA)>
+<!ELEMENT APP (#PCDATA)>
+<!ELEMENT UPD (#PCDATA)>
+<!ELEMENT NVD (#PCDATA)>
+<!ELEMENT TNR (#PCDATA)>
+]>
+
+<THESAURUS>
+<CONCEPT>
+ <DESCRIPTOR>Abbazie</DESCRIPTOR>
+ <ENG>Abbeys</ENG>
+  <NTG level="1">Abbazie benedettine  </NTG>
+  <NTG level="1">Abbazie cistercensi  </NTG>
+  <NTG level="1">Abbazie medievali  </NTG>
+  <NTG level="1">Abbazie romaniche</NTG>
+
+  <BTG level="1">Monumenti
+   <BTG level="2">Patrimonio culturale
+    <BTG level="3">Patrimonio turistico</BTG>
+   </BTG>
+  </BTG>
+
+ <SC>11 POI</SC>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Abbazie benedettine</DESCRIPTOR>
+ <ENG>Benedictine abbeys</ENG>
+  <BTG level="1">Abbazie
+   <BTG level="2">Monumenti
+    <BTG level="3">Patrimonio culturale
+     <BTG level="4">Patrimonio turistico</BTG>
+    </BTG>
+   </BTG>
+  </BTG>
+
+ <SC>11 POI</SC>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Abbazie cistercensi</DESCRIPTOR>
+ <ENG>Cistercian abbeys</ENG>
+  <BTG level="1">Abbazie
+   <BTG level="2">Monumenti
+    <BTG level="3">Patrimonio culturale
+     <BTG level="4">Patrimonio turistico</BTG>
+    </BTG>
+   </BTG>
+  </BTG>
+
+ <SC>11 POI</SC>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Abbazie medievali</DESCRIPTOR>
+ <ENG>Medieval abbeys</ENG>
+  <BTG level="1">Abbazie
+   <BTG level="2">Monumenti
+    <BTG level="3">Patrimonio culturale
+     <BTG level="4">Patrimonio turistico</BTG>
+    </BTG>
+   </BTG>
+  </BTG>
+
+ <SC>11 POI</SC>
+</CONCEPT>
+
+</THESAURUS>

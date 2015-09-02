@@ -1,0 +1,15 @@
+POST /thesapp/_mappings/termstats
+
+{
+   "termstats":{
+	  "dynamic": "strict",
+	  "_timestamp": { "enabled" : true, "store": true },	  
+	  "_ttl": { "enabled" : true, "default" : "60d" },
+      "properties":{
+         "descriptor":{ "type":"string", "index":"not_analyzed", "store":true },
+		 "domain":{ "type":"string", "index":"not_analyzed", "store":true },
+		 "language":{ "type":"string", "index":"not_analyzed", "store":true },
+		 "found": { "type":"boolean", "index":"not_analyzed", "store":true }
+		 }
+	}
+}

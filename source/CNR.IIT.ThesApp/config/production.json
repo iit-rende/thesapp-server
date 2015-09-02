@@ -1,0 +1,29 @@
+{
+    "hosting": {
+        "port": 9000,
+        "cacheMaxAge": 600,
+        "searchInterval": 50
+    },
+    "paths": {
+        "tempDir": "/temp/"
+    },
+    "localization": {
+        "supportedLanguages": [ "it", "en" ],
+        "defaultLanguage": "it"
+    },
+    "elasticsearch": {
+        "host": "thesapp.iit.cnr.it",
+        "index": "thesapp",
+        "termsType": "terms",
+        "domainsType": "domains",
+        "termstatsType": "termstats",
+        "messagesType":  "messages",
+        "log": [ "error" ]
+    },
+    "gcm": { 
+        "serverKey": "<type key here>"
+    },
+    "users": { 
+        "iitcnr":  "thesapp"
+    }
+}

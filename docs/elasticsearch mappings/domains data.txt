@@ -1,0 +1,5 @@
+POST /thesapp/domains/Malattie+rare
+{ "descriptor": "Malattie rare", "color": "#f44336", "localizations": [ { "descriptor": "Malattie rare", "description": "Thesaurus medico contenente circa 700 termini di malattie rare", "language": "it", "termCount": 0 }, { "descriptor": "Rare diseases", "description": "Medical thesaurus with over 700 terms about rare diseases", "language": "en", "termCount": 0 } ] }
+
+POST /thesapp/domains/Turismo
+{ "descriptor": "Turismo", "color": "#4caf50", "localizations": [ { "descriptor": "Turismo", "description": "Thesaurus turistico contenente circa 1700 termini su strutture e mete vacanziere", "language": "it", "termCount": 0 }, { "descriptor": "Tourism", "description": "Tourism thesaurus with over 1700 terms about buildings and vacation destinations", "language": "en", "termCount": 0 } ] }

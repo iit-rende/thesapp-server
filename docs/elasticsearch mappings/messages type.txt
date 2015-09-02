@@ -1,0 +1,28 @@
+POST /thesapp/_mappings/messages
+
+{
+   "messages":{  
+	"dynamic": "strict",
+	"_timestamp": { "enabled" : true, "store": true },
+      "properties":{
+         "domain":{  
+            "type":"string",
+            "index":"not_analyzed"
+         },
+         "localizations":{  
+            "type":"nested",
+			"dynamic": "strict",
+            "properties":{  
+               "language":{  
+                  "type":"string",
+                  "index":"not_analyzed"
+               },
+               "text":{  
+                  "type":"string",
+                  "index":"not_analyzed"
+               }
+            }
+         }
+      }
+   }
+}

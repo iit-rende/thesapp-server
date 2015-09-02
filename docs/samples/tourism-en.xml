@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!-- HIERARCHICAL -->
+<!DOCTYPE THESAURUS [
+<!ELEMENT THESAURUS (CONCEPT+)>
+<!ELEMENT CONCEPT (DESCRIPTOR|NON-DESCRIPTOR|SC|SN|UF|USE|BTG|BTI|BTP|NTG|NTI|NTP|RT|ITA)* >
+<!ELEMENT DESCRIPTOR (#PCDATA)>
+<!ELEMENT NON-DESCRIPTOR (#PCDATA)>
+<!ELEMENT SC (#PCDATA)>
+<!ELEMENT SN (#PCDATA)>
+<!ELEMENT UF (#PCDATA)>
+<!ELEMENT USE (#PCDATA)>
+<!ELEMENT BTG (#PCDATA|SC|SN|UF|USE|BTG|BTI|BTP|NTG|NTI|NTP|RT|ITA)* >
+<!ATTLIST BTG level CDATA "">
+<!ELEMENT BTI (#PCDATA|SC|SN|UF|USE|BTG|BTI|BTP|NTG|NTI|NTP|RT|ITA)* >
+<!ATTLIST BTI level CDATA "">
+<!ELEMENT BTP (#PCDATA|SC|SN|UF|USE|BTG|BTI|BTP|NTG|NTI|NTP|RT|ITA)* >
+<!ATTLIST BTP level CDATA "">
+<!ELEMENT NTG (#PCDATA|SC|SN|UF|USE|BTG|BTI|BTP|NTG|NTI|NTP|RT|ITA)* >
+<!ATTLIST NTG level CDATA "">
+<!ELEMENT NTI (#PCDATA|SC|SN|UF|USE|BTG|BTI|BTP|NTG|NTI|NTP|RT|ITA)* >
+<!ATTLIST NTI level CDATA "">
+<!ELEMENT NTP (#PCDATA|SC|SN|UF|USE|BTG|BTI|BTP|NTG|NTI|NTP|RT|ITA)* >
+<!ATTLIST NTP level CDATA "">
+<!ELEMENT RT (#PCDATA)>
+<!ELEMENT ITA (#PCDATA)>
+]>
+
+<THESAURUS>
+<CONCEPT>
+ <NON-DESCRIPTOR>1-star hotels</NON-DESCRIPTOR>
+ <ITA>Alberghi ad 1 stella</ITA>
+ <USE>One-star hotels</USE>
+ <SC>2 Strutture</SC>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>2-star hotels</DESCRIPTOR>
+ <ITA>Alberghi a 2 stelle</ITA>
+ <UF>Two-star hotels</UF>
+  <BTG level="1">Hotels
+   <BTG level="2">Hotel accomodation
+    <BTG level="3">Accommodation facilities</BTG>
+   </BTG>
+  </BTG>
+
+   <BTP level="2">Lobby</BTP>
+
+ <SC>2 Strutture</SC>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>3-star hotels</DESCRIPTOR>
+ <ITA>Alberghi a 3 stelle</ITA>
+ <UF>Three-star hotels</UF>
+  <BTG level="1">Hotels
+   <BTG level="2">Hotel accomodation
+    <BTG level="3">Accommodation facilities</BTG>
+   </BTG>
+  </BTG>
+
+   <BTP level="2">Lobby</BTP>
+
+ <SC>2 Strutture</SC>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>4-star hotels</DESCRIPTOR>
+ <ITA>Alberghi a 4 stelle</ITA>
+ <UF>four-star hotels</UF>
+  <BTG level="1">Hotels
+   <BTG level="2">Hotel accomodation
+    <BTG level="3">Accommodation facilities</BTG>
+   </BTG>
+  </BTG>
+
+   <BTP level="2">Lobby</BTP>
+
+ <SC>2 Strutture</SC>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>5-star hotels</DESCRIPTOR>
+ <ITA>Alberghi a 5 stelle</ITA>
+ <UF>Five-star hotels</UF>
+  <BTG level="1">Hotels
+   <BTG level="2">Hotel accomodation
+    <BTG level="3">Accommodation facilities</BTG>
+   </BTG>
+  </BTG>
+
+   <BTP level="2">Lobby</BTP>
+
+ <SC>2 Strutture</SC>
+</CONCEPT>
+
+</THESAURUS>

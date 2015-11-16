@@ -257,5 +257,68 @@ describe('XmlTermProvider', function () {
     });
 
 
+	it('should not load terms when they contain the [ENG] suffix', function (done) {
+		
+		
+		var xmlContent =
+ "<?xml version=\"1.0\" encoding=\"ISO-8859-1\" ?>" +
+            "<THESAURUS>" +
+                "<CONCEPT>" +
+                    "<NON-DESCRIPTOR>Adventure holidays</NON-DESCRIPTOR>" +
+                    "<SN>Activity holidays (vacations) that contain an element of personal challenge, through controlled risk, daring and/or excitement, often in an inaccessible (wilderness) environment. Examples include caving, hang gliding, rock climbing, safaris, white water rafting.</SN>" +
+                    "<SC>7 Activities</SC>" +
+                    "<RT>Adventure tourism</RT>" +
+                    "<RT>Bungee jumping [ENG]</RT>" +
+                    "<RT>Caving</RT>" +
+                    "<RT>Hang gliding</RT>" +
+                    "<RT>Rock climbing</RT>" +
+                    "<RT>Safaris</RT>" +
+                    "<RT>White-water rafting</RT>" +
+                    //All kinds of flavors for Broader Terms
+                    "<BT>Holidays</BT>" +
+                    "<BTG>Relax     [ENG]</BTG>" +
+                    "<BTI>Resort</BTI>" +
+                    "<BTP>Vacations</BTP>" +
+                    //All kinds of flavors for Narrower Terms
+                    "<NT>Kayaking</NT>" +
+                    "<NTG>Rafting</NTG>" +
+                    "<NTI>Ziplining</NTI>" +
+                    "<NTP>Climbing [ENG]</NTP>" +
+                    "<UF>Adventuring</UF>" +
+                    "<UF>Exploration [ENG]    </UF>" +
+                    "<ITA>Viaggi di avventura</ITA>" + //italian localization of the term
+                    "<STA>Approved</STA>" +
+                    "<USE>Adventure Time</USE>" + //Ooo
+                "</CONCEPT>" +
+            "</THESAURUS>";
+		
+		var terms = XmlTermProvider.getTermsFromString(xmlContent, "Tourism", "en", function (terms, err) {
+			
+			(err == null).should.be.true;
+			terms.should.be.an.instanceOf(Array);
+			terms.length.should.equal(1);
+			var term = terms[0];
+			term.should.be.an.instanceOf(Term);
+			var plainObject = term.toPlainObject();
+			plainObject.should.have.properties({
+				descriptor: "Adventure holidays",
+				scopeNote: "Activity holidays (vacations) that contain an element of personal challenge, through controlled risk, daring and/or excitement, often in an inaccessible (wilderness) environment. Examples include caving, hang gliding, rock climbing, safaris, white water rafting.",
+				relatedTerms: [{ descriptor: "Adventure tourism" }, { descriptor: "Caving" }, { descriptor: "Hang gliding" }, { descriptor: "Rock climbing" }, { descriptor: "Safaris" }, { descriptor: "White-water rafting" }],
+				localizations: [{ language: "it", descriptor: "Viaggi di avventura" }],
+				categories: [{ descriptor: "Activities" }],
+				narrowerTerms: [{ descriptor: "Kayaking" }, { descriptor: "Rafting" }, { descriptor: "Ziplining" }],
+				broaderTerms: [{ descriptor: "Holidays" }, { descriptor: "Resort" }, { descriptor: "Vacations" }],
+				useFor: [{ descriptor: "Adventuring" }],
+				use: "Adventure Time"
+			});
+			
+			done();
+		});
+        
+       
+
+	});
+
+
     
 });

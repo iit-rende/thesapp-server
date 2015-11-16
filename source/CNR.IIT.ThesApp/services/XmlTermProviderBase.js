@@ -4,14 +4,19 @@ var XmlTermProviderBase = require('./XmlTermProviderBase.js');
 
 module.exports = function () {
     
-   
+	var forbiddenWord = "[ENG]";
+	
+
     function addTermToCollection(term, elementNames, owner, addFunc) {
         for (var i = 0; i < elementNames.length; i++) {
             var elementName = elementNames[i];
             if (elementName in term) {
                 var terms = term[elementName];
                 for (var item = 0; item < terms.length; item++) {
-                    var value = terms[item];
+					var value = terms[item];
+					
+					if (typeof (value) == 'string' && value.indexOf(forbiddenWord) > -1) continue;
+					
                     addFunc.call(owner, (typeof (value) == 'string') ? value.trim() : value._.trim()); //if the xml element had attributes, the text value would then be nested in a property named _
 
                     //recursive elements?
@@ -46,7 +51,9 @@ module.exports = function () {
             
             if (valueTransform) {
                 value = valueTransform(name, value);
-            }
+			}
+			
+			if (typeof (value) == 'string' && value.indexOf(forbiddenWord) > -1) return null;
 
             return (typeof (value) == 'string') ? value : value._; //if the xml element had attributes, the text value would then be nested in a property named _
         }

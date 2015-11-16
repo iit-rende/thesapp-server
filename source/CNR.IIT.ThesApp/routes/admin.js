@@ -305,7 +305,7 @@ router.post('/messages', auth, function (req, res) {
                         localizations: localizations
                     }
                 },
-            notification: { sound: "default", badge: "2", title: "default", "body": localizations[i].text }
+                notification: { sound: "default", badge: "1", title: "default", "body": localizations[i].text }
             })
         );
     }
@@ -330,7 +330,7 @@ router.post('/messages', auth, function (req, res) {
             response.on('data', function (chunk) {
                 requestsCompleted++;
                 if (requestsCompleted == postData.length) {
-                    addToElastichSearch();
+                    addToElasticSearch();
                 }
             });
         });
